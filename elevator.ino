@@ -12,6 +12,8 @@ void setup() {
   int floor3stop = 7;
   int floor4stop = 8;
 
+  int floornum;
+
   pinMode(floor1button, INPUT);
   pinMode(floor2button, INPUT);
   pinMode(floor3button, INPUT);
@@ -24,13 +26,21 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
-  read buttons
+//find cab location
+    locatecab()
+    {
+     for (floornum = 1; floornum <= 4; floornum++;)
+      {
+        if (digitalRead(floornum) == LOW)
+         {
+          cablocation = floornum;
+         }
 
-      find cab location
-    //cab is below desired floor
-    if button floor #is
+
+      }
+
+    }
     > cablocation
 
     movecab(up) {
